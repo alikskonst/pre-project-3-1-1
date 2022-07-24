@@ -1,6 +1,6 @@
 package edu.kata.task311.service;
 
-import edu.kata.task311.model.User;
+import edu.kata.task311.entity.User;
 
 import java.util.List;
 
