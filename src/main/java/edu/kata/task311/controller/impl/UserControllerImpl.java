@@ -3,21 +3,17 @@ package edu.kata.task311.controller.impl;
 import edu.kata.task311.controller.UserController;
 import edu.kata.task311.entity.User;
 import edu.kata.task311.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/users")
+@AllArgsConstructor
 public class UserControllerImpl implements UserController {
 
     private final UserService userService;
-
-    @Autowired
-    public UserControllerImpl(UserService userService) {
-        this.userService = userService;
-    }
 
     //------------------------------------------------------------------------------------------------------------------
 
