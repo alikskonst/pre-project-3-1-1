@@ -7,9 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@AllArgsConstructor
 @Controller
 @RequestMapping
-@AllArgsConstructor
 public class IndexControllerImpl implements IndexController {
 
     private final UserService userService;
