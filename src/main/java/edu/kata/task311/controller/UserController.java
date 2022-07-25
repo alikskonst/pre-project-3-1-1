@@ -12,7 +12,7 @@ public interface UserController {
     String create(ModelMap modelMap);
 
     @GetMapping("/update/{id}")
-    String preUpdate(ModelMap modelMap, @PathVariable("id") Long id);
+    String pageUpdate(ModelMap modelMap, @PathVariable("id") Long id);
 
     @PostMapping("/create")
     String create(User user);

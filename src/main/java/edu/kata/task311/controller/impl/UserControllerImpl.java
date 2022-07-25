@@ -25,7 +25,7 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public String preUpdate(ModelMap modelMap, Long id) {
+    public String pageUpdate(ModelMap modelMap, Long id) {
         modelMap.addAttribute("user", userService.findOne(id));
         return "user_manage";
     }
