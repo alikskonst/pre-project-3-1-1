@@ -30,7 +30,7 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public String pageCreate(User user) {
+    public String create(User user) {
         userService.save(user);
         return "redirect:/index";
     }

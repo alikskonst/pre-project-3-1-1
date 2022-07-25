@@ -16,7 +16,7 @@ public interface UserController {
     String pageUpdate(ModelMap modelMap, @PathVariable("id") Long id);
 
     @PostMapping("/create")
-    String pageCreate(@ModelAttribute("user") User user);
+    String create(@ModelAttribute("user") User user);
 
     @PostMapping("/update")
     String update(@ModelAttribute("user") User user);
