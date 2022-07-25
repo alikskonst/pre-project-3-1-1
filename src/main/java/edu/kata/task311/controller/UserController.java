@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface UserController {
 
     @GetMapping("/create")
-    String create(ModelMap modelMap);
+    String pageCreate(ModelMap modelMap);
 
     @GetMapping("/update/{id}")
     String pageUpdate(ModelMap modelMap, @PathVariable("id") Long id);
 
     @PostMapping("/create")
-    String create(@ModelAttribute("user") User user);
+    String pageCreate(@ModelAttribute("user") User user);
 
     @PostMapping("/update")
     String update(@ModelAttribute("user") User user);

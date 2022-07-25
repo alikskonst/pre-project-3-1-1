@@ -18,7 +18,7 @@ public class UserControllerImpl implements UserController {
     //------------------------------------------------------------------------------------------------------------------
 
     @Override
-    public String create(ModelMap modelMap) {
+    public String pageCreate(ModelMap modelMap) {
         modelMap.addAttribute("user", new User());
         return "user_manage";
     }
@@ -30,7 +30,7 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public String create(User user) {
+    public String pageCreate(User user) {
         userService.save(user);
         return "redirect:/index";
     }
