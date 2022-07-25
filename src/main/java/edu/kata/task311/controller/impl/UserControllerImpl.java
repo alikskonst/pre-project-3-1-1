@@ -6,6 +6,7 @@ import edu.kata.task311.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @AllArgsConstructor
@@ -30,13 +31,13 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public String create(User user) {
+    public String create(@ModelAttribute("user") User user) {
         userService.save(user);
         return "redirect:/index";
     }
 
     @Override
-    public String update(User user) {
+    public String update(@ModelAttribute("user") User user) {
         userService.save(user);
         return "redirect:/index";
     }
