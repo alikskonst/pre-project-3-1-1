@@ -30,20 +30,14 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public String create(User user) {
+    public String save(User user) {
         userService.save(user);
-        return "redirect:/index";
-    }
-
-    @Override
-    public String update(User user) {
-        userService.save(user);
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @Override
     public String remove(Long id) {
         userService.remove(id);
-        return "redirect:/index";
+        return "redirect:/";
     }
 }

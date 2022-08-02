@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title>User list</title>
     <style>
         .buttonToLink {
@@ -44,9 +45,9 @@
             <td th:text="${user.name}"></td>
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.middleName}"></td>
-            <td><a th:href="@{/users/update/{id}(id=${user.id})}">update</a></td>
+            <td><a th:href="@{'/users/update/{id}'(id=${user.id})}">update</a></td>
             <td>
-                <form th:action="@{/users/remove/{id}(id=${user.id})}" th:method="post">
+                <form th:action="@{'/users/remove/{id}'(id=${user.id})}" th:method="delete">
                     <button class="buttonToLink" type="submit">remove</button>
                 </form>
             </td>

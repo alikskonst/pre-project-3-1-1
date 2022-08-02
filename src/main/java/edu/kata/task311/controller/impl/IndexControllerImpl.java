@@ -14,6 +14,8 @@ public class IndexControllerImpl implements IndexController {
 
     private final UserService userService;
 
+    //------------------------------------------------------------------------------------------------------------------
+
     @Override
     public String index(ModelMap modelMap) {
         modelMap.addAttribute("userList", userService.findAll());

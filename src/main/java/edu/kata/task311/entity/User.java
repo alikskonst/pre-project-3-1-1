@@ -13,19 +13,19 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     @Id
-    @Column(name = "id")
+    //@Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Basic
-    @Column(name = "name")
+    //@Basic
+    //@Column(name = "name")
     private String name;
 
-    @Basic
-    @Column(name = "last_name")
+    //@Basic
+    //@Column(name = "last_name")
     private String lastName;
 
-    @Basic
-    @Column(name = "middle_name")
+    //@Basic
+    //@Column(name = "middle_name")
     private String middleName;
 }
